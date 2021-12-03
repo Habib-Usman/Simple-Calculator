@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Outfit", sans-serif;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    background: #1c1c1c;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px, solid #ffffff;
+    outline: none;
+    background-color: rbga(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+    background-color: lightgray;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.text--white {
+    color: white;
+}
+
+.button__color {
+    background: #717172;
+
+    &--orange {
+        background: #f2a43c;
+    }
+
+    &--dark-grey {
+        background: #555556;
+    }
+}
+.output {
+    grid-column: 1 / -1;
+    background-color: #434344;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 3rem 3rem 0px 0px;
+}
+
+.curved--left {
+    border-radius: 0px 0px 0px 3rem;
+}
+.curved--right {
+    border-radius: 0px 0px 3rem 0px;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
